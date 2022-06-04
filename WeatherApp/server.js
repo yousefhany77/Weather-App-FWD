@@ -14,7 +14,7 @@ let port = 3000;
 let url = `http://localhost:${port}`;
 
 app.post("/postdata", (req, res) => {
-  let { temp, newDate, feelings ,city } = req.body;
+  let { temp, newDate, feelings, city } = req.body;
   projectData.temp = temp;
   projectData.date = newDate;
   projectData.feelings = feelings;

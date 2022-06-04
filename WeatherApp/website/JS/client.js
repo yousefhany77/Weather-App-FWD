@@ -1,4 +1,4 @@
-const APIKEY = "a8d6ab39591853400732249344cbc92e";
+const APIKEY = "";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather`;
 const localhost = `http://localhost:3000/`;
 
