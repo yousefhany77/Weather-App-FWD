@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Poppins";
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+#title{
+    font-weight: 700;
+    font-size:2.5em;
+    margin: 0.5em;
+}
+form{
+    width: 70%;
+    padding: 2em;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    padding: 0.2em 1em;
+    font-size: 1.1em;
+    font-weight:500;
+    background-color: white;
+} 
+form input , textarea {
+    width: 100%;
+    margin-bottom: 1.2em;
+    font-weight: 400;
+    padding: 0.5rem;
+}
+
+form label {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+#date::before{
+    content: "Date: ";
+}
+#temp::before{
+    content: "Temperature: ";
+    
+}
+#content::before{
+    content: "How do you feel about the day? ";
+    
+}
+::before{
+    font-weight: 600;
+}
+
+#entryHolder{
+    visibility: hidden;
+    margin: 0.6em;
+    font-size: 1.2em;
+    text-align:justify;
+}
+h5{
+    position: fixed;
+    bottom: 0;
+    margin:0.3em;
+    color: lightslategray
+}
+form{
+    position: relative;
+}
+#errorbox{
+    position: absolute;
+    background-color: rgb(231, 75, 75);
+    width: 88%;
+    height: 50px;
+   display: none;
+   top: -15px;
+   color: white;
+    justify-content: center;
+    align-items: center;
+}

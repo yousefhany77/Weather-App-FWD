@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Weather in USA</h1>
+    <form action="postdata" method="POST">
+    <div id="errorbox"><h3 id="errorDitails">Error ></h3></div>
+    <label for="ZIP">ZIP No.</label><br />
+    <input type="number" id="zip" placeholder="enter zip code" required />
+    <br />
+    <label for="text">What does the weather feel like? </label><br />
+    <textarea style="height: 150px" type="text" id="feelings"></textarea><br />
+    <button id="generate" type="submit">submit</button>
+  </form>
+  
+  <div id="entryHolder"> 
+    <h2 id="city"></h2>
+    <div id="date"></div>
+    <div id="temp"></div>
+    <div id="content"></div>
+  </div>
+  <h5>THIS APP ONLY SUPPORTS USA ZIP CODES</h5>
+  </body>
+  <script src="./JS/client.js"></script>
+</html>
