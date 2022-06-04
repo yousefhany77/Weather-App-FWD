@@ -18,8 +18,8 @@ let getWeatherData = async (apiurl = "", zip, units = "metric") => {
       return weatherData;
     } else {
       console.error("Zip Code not found or invalid zip code");
-    errorbox.style.display = "flex";
-    errorDitails.innerHTML = "Zip Code not found";
+      errorbox.style.display = "flex";
+      errorDitails.innerHTML = "Zip Code not found";
     }
   } catch (err) {
     console.error(err);
@@ -27,8 +27,8 @@ let getWeatherData = async (apiurl = "", zip, units = "metric") => {
 };
 
 let generate = document.getElementById("generate");
-let errorbox = document.getElementById('errorbox')
-let errorDitails = document.getElementById('errorDitails');
+let errorbox = document.getElementById("errorbox");
+let errorDitails = document.getElementById("errorDitails");
 generate.addEventListener("click", async () => {
   let zip = document.getElementById("zip").value;
   let feelings = document.getElementById("feelings").value;
@@ -37,8 +37,8 @@ generate.addEventListener("click", async () => {
       errorbox.style.display = "none";
       // ---------------- Step 1 ---------------- >>>>> Get Data from API with Client ZIP
       let temperature = await getWeatherData(apiUrl, zip);
-      let temp = temperature.main.temp
-      let city = temperature.name
+      let temp = temperature.main.temp;
+      let city = temperature.name;
       // ---------------- Step 2 ---------------- >>>>> POST Data to the projectData
       await fetch("/postdata", {
         method: "POST",
@@ -50,7 +50,7 @@ generate.addEventListener("click", async () => {
           temp,
           newDate,
           feelings,
-          city
+          city,
         }),
       });
       // ---------------- Step 3 ---------------- >>>>> update UI
@@ -69,11 +69,9 @@ generate.addEventListener("click", async () => {
     } catch (e) {
       console.error("Error: " + e);
     }
-  }
-  else {
-    console.error("No ZIP Code found")
+  } else {
+    console.error("No ZIP Code found");
     errorbox.style.display = "flex";
     errorDitails.innerHTML = "ZIP Code required";
   }
-  
 });
