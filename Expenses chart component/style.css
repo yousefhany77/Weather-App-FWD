@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-weight: 400;
+}
+body {
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.expensesComponent {
+  width: 60%;
+}
+.accountBalance {
+  background-color: var(--Soft-red);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+  align-items: center;
+}
+.accountBalance h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+.accountBalance img {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+.accountBalance h2 {
+  grid-column: 1;
+  margin-top: 0.2rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+.accountDetails {
+  background-color: var(--Very-pale-orange);
+  padding: 2em;
+  margin-top: 1em;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 5px 3px rgba(224, 224, 224, 0.116);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.totalMonthSpending {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.2em;
+  justify-content: start;
+  align-items: flex-end;
+  color: var(--Dark-brown);
+}
+/* Total amount  spent during the month */
+.totalMonthSpending h2 {
+  grid-column: 1 / span 2;
+  grid-row: 2 / 3;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/* Vs Last Month Total */
+
+.totalMonthSpending h5 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.totalMonthSpending h3 {
+  font-size: 0.8rem;
+  color: var(--Medium-brown);
+  font-weight: 400;
+}
+.bar {
+  background-color: var(--Soft-red);
+  height: 15rem;
+  width: 4vw;
+  border-radius: 0.6rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  transition: 500ms ease-out ;
+
+}
+.charts h3 {
+  color: var(--Medium-brown);
+  font-size: 0.8rem;
+}
+.charts {
+  padding: 1em 0em;
+}
+
+.charts ul li {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  text-transform: capitalize;
+  justify-content: flex-end;
+}
+
+.after {
+  position: absolute;
+  top: -5em;
+  background-color: var(--Dark-brown);
+  color: white;
+  padding: 0.3rem 1rem;
+  font-size: 0.4rem;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.active{
+    background-color: var(--Cyan);
+    transition: 100ms ease-in-out ;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .expensesComponent {
+    width: 90%;
+  }
+  
+}

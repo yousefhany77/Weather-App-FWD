@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="expensesComponent">
+      <div class="accountBalance">
+        <h3>My balance</h3>
+        <h2>$921.48</h2>
+        <img src="./images/logo.svg" alt="" srcset="" />
+      </div>
+      <!-- accountDetails -->
+      <div class="accountDetails">
+        <h1>Spending - Last 7 days</h1>
+        <div class="charts">
+          <ul>
+            <li>
+              <div data-day="1" class="bar"></div>
+              <h3>Mon</h3>
+            </li>
+            <li>
+              <div data-day="2" class="bar"></div>
+              <h3>tue</h3>
+            </li>
+            <li>
+              <div data-day="3" class="bar"></div>
+              <h3>wed</h3>
+            </li>
+            <li>
+              <div data-day="4" class="bar"></div>
+              <h3>thu</h3>
+            </li>
+            <li>
+              <div data-day="5" class="bar"></div>
+              <h3>fri</h3>
+            </li>
+            <li>
+              
+              <div data-day="6" class="bar"></div>
+              <h3>sat</h3>
+            </li>
+            <li>
+              <div data-day="7" class="bar"></div>
+              <h3>sun</h3>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="totalMonthSpending">
+          <div class="thisMonth">
+            <h3>Total this month</h3>
+            <h1 id = "totalMonthSpending"></h1>
+          </div>
+          <div class="lastmonth">
+            <h5 id = "lastmonthPercentage"></h5>
+            <h3>from last month</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="app.js"></script>
+  </body>
+</html>
